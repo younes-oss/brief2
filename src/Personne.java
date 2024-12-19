@@ -1,53 +1,51 @@
 public abstract class Personne {
-    private static int compteurId = 1;
-    private  int id ;
-    private String nom,prenom,email;
 
-    public Personne(int id,String nom, String prenom, String email){
-        this.id=compteurId++;
-        this.nom=nom;
-        this.prenom=prenom;
-        this.email=email;
+    private static int compteurId = 1; // Compteur global pour générer des IDs uniques
+    private int id; // ID unique pour chaque instance
+    private String nom;
+    private String prenom;
+    private String email;
 
+    // Constructeur
+    public Personne(String nom, String prenom, String email) {
+        this.id = compteurId; // Générer un ID unique
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        compteurId++;
     }
+    public Personne(){}
 
-    public static int getCompteurId() {
-        return compteurId;
-    }
-
-    public static void setCompteurId(int compteurId) {
-        Personne.compteurId = compteurId;
-    }
-
+    // Getters
     public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        return this.id; // Retourne l'ID unique de l'instance
     }
 
     public String getNom() {
         return nom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
     public String getPrenom() {
         return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
     }
 
     public String getEmail() {
         return email;
     }
 
+    // Setters
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+
 }
