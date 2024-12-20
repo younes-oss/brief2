@@ -38,7 +38,7 @@ public class Application {
         int choix = 0;
         Apprenant apprenant = new Apprenant();
         Scanner scanner = new Scanner(System.in);
-        while (choix !=4){
+        while (choix !=6){
             System.out.println("   ***********************************************");
             System.out.println("   *  1.\" Ajouter un Apprenant a une classe \"  *");
             System.out.println("   *  2.\"Associer un Apprenant a une classe \"  *");
@@ -49,15 +49,20 @@ public class Application {
             choix = scanner.nextInt();
             switch (choix){
                 case 1 :
-
                     apprenant.ajouterApprenant();
                     break;
-                case 2:apprenant.modiferApprenant();
+                case 2:
                     break;
                 case 3:
+                    apprenant.modiferApprenant();
+                    break;
+                case 4 :
                     apprenant.AfficherApprenant();
                     break;
-                case 4:
+                case 5:
+                    apprenant.supprimerApprenant();
+                    break;
+                case 6:
                     System.exit(0);
                     break;
             }
