@@ -27,9 +27,7 @@ public abstract class Personne {
         return nom;
     }
 
-    public String getPrenom() {
-        return prenom;
-    }
+    public String getPrenom() {return prenom;}
 
     public String getEmail() {
         return email;

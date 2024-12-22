@@ -59,10 +59,7 @@ public class Apprenant extends Personne{
                 String lastName = scanner.next();
                 System.out.print("\n votre email : ");
                 String email = scanner.next();
-                //Apprenant apprenant =new Apprenant();
-//                apprenant.setPrenom(firstName);
-//                apprenant.setNom(lastName);
-//                apprenant.setEmail(email);
+
                 apprenants.get(i).setNom(firstName);
                 apprenants.get(i).setPrenom(lastName);
                 apprenants.get(i).setEmail(email);

@@ -3,6 +3,7 @@ package brief2.src;
 import java.util.ArrayList;
 
 public class Classe {
+    private int id;
     private String nom;
     private Formateur formateur;
     private ArrayList<Apprenant> apprenants = new ArrayList<>();

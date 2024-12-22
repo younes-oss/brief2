@@ -90,14 +90,14 @@ public class Application {
                 case 2:
                     break;
                 case 3:
-
+                    formateur.afficherFormateur();
                     break;
                 case 4:
-
+                    formateur.modiferFormateur();
                     break;
                 case 5:
 
-
+                    formateur.supprimerFormateur();
                     break;
                 case 6:
                     System.out.println("\" voila la liste principale \" \n");
