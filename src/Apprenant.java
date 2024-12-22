@@ -74,8 +74,12 @@ public class Apprenant extends Personne{
     public void AfficherApprenant(){
 
         for(int i =0 ; i<apprenants.size();i++){
-
-            System.out.println("id : " +apprenants.get(i).getId()+" full name : "+ apprenants.get(i).getNom() +" "+ apprenants.get(i).getPrenom()+" email: " + apprenants.get(i).getEmail());
+            int compteur = 1;
+            compteur+=i;
+            System.out.print("------------Apprenant"+compteur+"--------------\n");
+            System.out.println("       id : " +apprenants.get(i).getId()+"\n" +
+                    "       full name : "+ apprenants.get(i).getNom() +" "+ apprenants.get(i).getPrenom()+"\n" +
+                    "       email: " + apprenants.get(i).getEmail());
 
         }
     }

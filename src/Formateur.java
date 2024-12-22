@@ -60,7 +60,22 @@ public class Formateur extends Personne {
         formateurs.add(new Formateur(firstName,lastName,email,specialite,Salaire));
     }
 
-    
+    public void afficherFormateur(){
+        for(int i = 0 ; i<formateurs.size();i++){
+            if(formateurs.isEmpty()){
+                System.out.println("la liste des formateurs est vide" );
+            }
+        }
+        for(int i =0 ; i<formateurs.size();i++){
+            int compteur = 1;
+            compteur+=i;
+            System.out.print("------------Apprenant"+compteur+"--------------\n");
+            System.out.println("       id : " +formateurs.get(i).getId()+"\n" +
+                    "       full name : "+ formateurs.get(i).getNom() +" "+ formateurs.get(i).getPrenom()+"\n" +
+                    "       email: " + formateurs.get(i).getEmail());
+
+        }
+    }
 
 
 }
