@@ -15,7 +15,7 @@ public class Formateur extends Personne {
         super(nom, prenom, email);
         this.specialite = specialite;
         this.salaire = salaire;
-        this.classe = classe;
+        Application.formateurs.add(this);
     }
 
     public Formateur() {
@@ -46,7 +46,7 @@ public class Formateur extends Personne {
         this.classe = classe;
     }
 
-    public void ajouterFormrateur() {
+    public void ajouterFormateur() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("votre nom : ");
         String firstName = scanner.next();
@@ -59,7 +59,7 @@ public class Formateur extends Personne {
         System.out.print("\n votre salaire : ");
         double Salaire = scanner.nextDouble();
 
-        formateurs.add(new Formateur(firstName, lastName, email, specialite, Salaire));
+        Application.formateurs.add(new Formateur(firstName, lastName, email, specialite, Salaire));
     }
 
     public void afficherFormateur() {

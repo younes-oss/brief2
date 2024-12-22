@@ -1,10 +1,15 @@
 package brief2.src;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Application {
+    static  ArrayList<Formateur> formateurs = new ArrayList<>();
+    static ArrayList<Apprenant> apprenants = new ArrayList<>();
+    static ArrayList<Formateur> classes = new ArrayList<>();
+
 
     public static void main(String[] args) {
 
@@ -72,7 +77,9 @@ public class Application {
 
     public static void menuFormateur() {
         Formateur formateur = new Formateur();
+        Scanner scanner = new Scanner(System.in);
         int choix = 0;
+        while (choix != 6) {
         System.out.print("-----------------Gestion des Formateurs-----------------\n" +
                 "     |\"    1.ajouter un formateur a une classe \"\n         |" +
                 "     |\"    2.associer un formateur a une classe \"\n        |" +
@@ -80,12 +87,12 @@ public class Application {
                 "     |\"    4.afficher tous les formateurs\"\n               |" +
                 "     |\"    5.supprimer un formateur\"\n                     |" +
                 "     |\"    6.retourner a la liste principale                |");
-        Scanner scanner = new Scanner(System.in);
+
         choix = scanner.nextInt();
-        while (choix != 6) {
+
             switch (choix) {
                 case 1:
-                    formateur.ajouterFormrateur();
+                    formateur.ajouterFormateur();
                     break;
                 case 2:
                     break;

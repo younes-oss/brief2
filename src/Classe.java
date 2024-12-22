@@ -1,45 +1,71 @@
 package brief2.src;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Classe {
-    private int id;
+public class Classe  {
+    Formateur formateur;
+    static ArrayList<Apprenant> apprenants = new ArrayList();
+    static ArrayList<Classe> classes = new ArrayList<>();
+
     private String nom;
-    private Formateur formateur;
-    private ArrayList<Apprenant> apprenants = new ArrayList<>();
+    private int id;
 
+    static private int counter = 1;
 
-    public Classe(String nom, Formateur formateur, ArrayList<Apprenant> apprenants) {
+    public Classe(String nom) {
+        this.formateur = null;
         this.nom = nom;
-        this.formateur = formateur;
-        this.apprenants = apprenants;
+        this.id = counter;
+        counter++;
     }
 
     public Classe() {
     }
 
-    public String getNom() {
-        return nom;
+    public int getID (){
+        return this.id;
     }
 
-    public void setNom(String nom) {
+    public String getName()
+    {
+        return this.nom;
+    }
+    public void setName(String nom){
         this.nom = nom;
     }
 
-    public Formateur getFormateur() {
-        return formateur;
+
+
+
+
+
+    static Scanner scanner = new Scanner(System.in);
+    public static void ajouteclasse() {
+
+        System.out.print("Entrez le nom de classe : ");
+        String nom = scanner.next();
+
+        System.out.println("-------------------------------");
+        System.out.println("Classe ajouté avec succès ! ");
+        System.out.println("-------------------------------");
+
+
+        classes.add(new Classe(nom));
     }
 
-    public void setFormateur(Formateur formateur) {
-        this.formateur = formateur;
+
+    public static void afficherclasse() {
+
+        for (int i = 0; i < classes.size(); i++) {
+            System.out.println("\n\n\nles listes des classes");
+
+            System.out.println("---------------------------");
+            System.out.println("L'ID est : " + classes.get(i).getID());
+            System.out.println("le nom est : " + classes.get(i).getName());
+
+        }
     }
 
-    public ArrayList<Apprenant> getApprenants() {
-        return apprenants;
-    }
-
-    public void setApprenants(ArrayList<Apprenant> apprenants) {
-        this.apprenants = apprenants;
-    }
 
 }
