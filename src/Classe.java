@@ -1,3 +1,5 @@
+package brief2.src;
+
 import java.util.ArrayList;
 
 public class Classe {

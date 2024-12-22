@@ -1,3 +1,5 @@
+package brief2.src;
+
 public abstract class Personne {
 
     private static int compteurId = 1; // Compteur global pour générer des IDs uniques
