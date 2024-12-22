@@ -66,6 +66,43 @@ public class Classe  {
 
         }
     }
+    public static void modifierclasse() {
+
+        System.out.println("Entre le nombre de ID");
+        int id = scanner.nextInt();
+
+        for (int i = 0; i < classes.size(); i++) {
+            if (id == classes.get(i).getID()) {
+
+                System.out.println("Saisir la nouvelle nom");
+                String nom = scanner.next();
+
+                classes.get(i).setName(nom);
+
+                System.out.println("-------------------------------");
+                System.out.println("Classes modifié avec succès ! ");
+                System.out.println("-------------------------------");
+
+
+            }
+        }
+    }
+
+    public static void supprimerclasse() {
+
+        System.out.println("Entre le nombre de ID");
+        int id = scanner.nextInt();
+        for (int i = 0; i < classes.size(); i++) {
+            if (id == classes.get(i).getID()) {
+                classes.remove(i);
+                System.out.println("-------------------------------");
+                System.out.println("Classe supprimé avec succès !");
+                System.out.println("-------------------------------");
+                break;
+            }
+
+        }
+    }
 
 
 }
